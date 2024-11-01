@@ -1,0 +1,66 @@
+# Function to perform various arithmetic operations
+def calculator():
+    print("Welcome to the Simple Calculator!")
+    
+    # Taking user input for numbers
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    
+    # Displaying operation choices
+    print("\nSelect an operation:")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
+    print("5. Modulus (%)")
+    print("6. Exponentiation (^)")
+    print("7. Floor Division (//)")
+    
+    # Taking user input for the operation choice
+    operation = input("\nEnter your choice (1/2/3/4/5/6/7): ")
+
+    # Performing the calculation based on the user's choice
+    if operation == '1':
+        #Performing addition
+        result = num1 + num2
+        print(f"\nResult: {num1} + {num2} = {result}")
+    elif operation == '2':
+        # Performing subtraction
+        result = num1 - num2
+        print(f"\nResult: {num1} - {num2} = {result}")
+    elif operation == '3':
+        #Doing multiplication
+        result = num1 * num2
+        print(f"\nResult: {num1} * {num2} = {result}")
+    elif operation == '4':
+        #Performing division operation
+        # Check for division by zero
+        if num2 != 0:
+            result = num1 / num2
+            print(f"\nResult: {num1} / {num2} = {result}")
+        else:
+            print("\nError: Division by zero is not allowed.")
+    elif operation == '5':
+        # Performing Modulus operation (remainder)
+        if num2 != 0:
+            result = num1 % num2
+            print(f"\nResult: {num1} % {num2} = {result}")
+        else:
+            print("\nError: Division by zero is not allowed.")
+    elif operation == '6':
+        # Performing Exponentiation operation (a^b)
+        result = num1 ** num2
+        print(f"\nResult: {num1} ^ {num2} = {result}")
+    elif operation == '7':
+        # Performing Floor division 
+        if num2 != 0:
+            result = num1 // num2
+            print(f"\nResult: {num1} // {num2} = {result}")
+        else:
+            print("\nError: Division by zero is not allowed.")
+        #If the user choice doesnot match the given list numbers
+    else:
+        print("\nInvalid input. Please choose a valid operation.")
+
+# Running the calculator
+calculator()
